@@ -14,15 +14,19 @@
 index.html linguist-vendored
 
 # Scratch project asset folders (images, audio, vectors, maps)
-assets/ linguist-vendored
-source/ linguist-vendored
-project/ linguist-vendored
-maps/ linguist-vendored
-map_hitbox/ linguist-vendored
-players/ linguist-vendored
-bullets/ linguist-vendored
-guns/ linguist-vendored
-zombies/ linguist-vendored
+assets/** linguist-vendored
+source/** linguist-vendored
+project/** linguist-vendored
+maps/** linguist-vendored
+map_hitbox/** linguist-vendored
+players/** linguist-vendored
+bullets/** linguist-vendored
+guns/** linguist-vendored
+zombies/** linguist-vendored
+
+# CSS styling — small, but vendored so it doesn't dilute the
+# JavaScript + Python language stats.
+styles/** linguist-vendored
 
 # ------------------------------------------------------------
 # Real source code — these are counted for language stats
@@ -30,6 +34,11 @@ zombies/ linguist-vendored
 
 # JavaScript game logic
 js/*.js linguist-detectable
+js/*.js linguist-language=JavaScript
+
+# React components (JSX) — treated as JavaScript
+components/*.jsx linguist-language=JavaScript
 
 # Python backend / hooks
 hooks/*.py linguist-detectable
+hooks/*.py linguist-language=Python
