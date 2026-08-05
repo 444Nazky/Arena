@@ -1,0 +1,35 @@
+# ============================================================
+# GitHub Language Statistics Configuration
+#
+# This repo is a packaged Scratch (TurboWarp) game. The huge
+# generated files (index.html bundle + Scratch project assets)
+# dominate byte counts and hide the real source code.
+#
+# We mark them as "vendored" so GitHub Linguist ignores them
+# when computing language statistics. This lets GitHub detect
+# the actual code: JavaScript (js/*.js) and Python (hooks/*.py).
+# ============================================================
+
+# TurboWarp-generated HTML bundle (contains the full Scratch runtime)
+index.html linguist-vendored
+
+# Scratch project asset folders (images, audio, vectors, maps)
+assets/ linguist-vendored
+source/ linguist-vendored
+project/ linguist-vendored
+maps/ linguist-vendored
+map_hitbox/ linguist-vendored
+players/ linguist-vendored
+bullets/ linguist-vendored
+guns/ linguist-vendored
+zombies/ linguist-vendored
+
+# ------------------------------------------------------------
+# Real source code — these are counted for language stats
+# ------------------------------------------------------------
+
+# JavaScript game logic
+js/*.js linguist-detectable
+
+# Python backend / hooks
+hooks/*.py linguist-detectable
